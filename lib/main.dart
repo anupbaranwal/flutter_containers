@@ -10,68 +10,43 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(backgroundColor: Colors.teal, title: Text('Containers and Alignments'),
-        leading: Icon(Icons.home,),),
         backgroundColor: Colors.teal,
-        body: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        body: SafeArea(
+            child: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Container(
-                    child: Icon(Icons.star, color: Colors.yellow, size: 80.0,),
-                    height: 100,
-                    width: 100,
-                    color: Colors.blue,
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        width: 100,
+                        color: Colors.red,
+                      ),
+                      SizedBox(width: 45,),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            height: 100,
+                            width: 100,
+                            color: Colors.yellow,
+                          ),
+                          Container(
+                            height: 100,
+                            width: 100,
+                            color: Colors.green,
+                          ),
+                        ],
+                      ),
+                      SizedBox(width: 45,),
+                      Container(
+                        width: 100,
+                        color: Colors.blue,
+                      ),
+                    ],
                   ),
-                  Container(
-                    height: 100,
-                    child: Icon(Icons.star, color: Colors.yellow, size: 80.0,),
-                    width: 100,
-                    color: Colors.green,
-                  )
                 ],
               ),
-              SizedBox(height: 20.0,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Container(
-                    height: 100,
-                    child: Icon(Icons.star, color: Colors.yellow, size: 80.0,),
-                    width: 100,
-                    color: Colors.blue,
-                  ),
-                  Container(
-                    height: 100,
-                    child: Icon(Icons.star, color: Colors.yellow, size: 80.0,),
-                    width: 100,
-                    color: Colors.green,
-                  )
-                ],
-              ),
-              SizedBox(height: 20.0,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Container(
-                    height: 100,
-                    child: Icon(Icons.star, color: Colors.yellow, size: 80.0,),
-                    width: 100,
-                    color: Colors.blue,
-                  ),
-                  Container(
-                    height: 100,
-                    child: Icon(Icons.star, color: Colors.yellow, size: 80.0,),
-                    width: 100,
-                    color: Colors.red,
-                  )
-                ],
-              )
-            ],
           ),
         ),
       ),
